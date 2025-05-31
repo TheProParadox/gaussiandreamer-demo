@@ -2,9 +2,9 @@ import math
 import numpy as np
 from scipy.spatial.distance import cdist
 
-from Gaussians import Gaussians
-from KDTree import KDTree
-from BoundingBox import BoundingBox
+from src.Gaussians import Gaussians
+from src.KDTree import KDTree
+from src.BoundingBox import BoundingBox
 
 
 # Initializes the 3D Gaussians from the point clouds after noisy point growing

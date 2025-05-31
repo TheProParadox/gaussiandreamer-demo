@@ -3,8 +3,12 @@ from diffusers import ShapEPipeline
 import numpy as np
 import matplotlib.pyplot as plt
 
-from TriangleMesh import TriangleMesh
-from PointClouds import PointClouds
+from src.TriangleMesh import TriangleMesh
+from src.PointClouds import PointClouds
+import os
+
+OUTPUT_PATH = './outputs'
+os.makedirs(OUTPUT_PATH, exist_ok=True)
 
 # Class representing the first stage of our GaussianDreamer implementation
 class DiffusionModel3D():
@@ -111,7 +115,7 @@ class DiffusionModel3D():
                    self.point_clouds.vertices[:, 2],
                    c=self.point_clouds.colors,
                    s=1)
-        plt.savefig('PointClouds.png')
+        plt.savefig(os.path.join(OUTPUT_PATH, 'PointClouds.png'))
 
     def visualizePointCloudsViews(self):
         figure = plt.figure(figsize=(6, 9), tight_layout=True)
@@ -141,7 +145,7 @@ class DiffusionModel3D():
         self.configureSubplot(ax6, -90, 90, "-XY view")
 
         figure.subplots_adjust(wspace=0.05, hspace=0.05)
-        plt.savefig('PointCloudsViews.png')
+        plt.savefig(os.path.join(OUTPUT_PATH, 'PointCloudsViews.png'))
 
     def configureSubplot(self, ax, elev, azim, title):
         ax.set_xlim((-1, 1))

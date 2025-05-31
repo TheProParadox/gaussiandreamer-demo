@@ -5,7 +5,6 @@ from src.GaussianInitialization import GaussianInitialization
 from src.OptimizationWith2DModel import OptimizationWith2DModel
 
 if __name__ == "__main__":
-
     prompt = sys.argv[1]
     sample_proportion = float(sys.argv[2])
 
@@ -23,9 +22,9 @@ if __name__ == "__main__":
     print("# of point clouds: {0}".format(point_clouds.vertices.shape[0]))
 
     diffusion_model_3d.visualizePointClouds()
-    print("Point clouds visualization saved to \"PointClouds.png\"")
+    print("Point clouds visualization saved as \"PointClouds.png\"")
     diffusion_model_3d.visualizePointCloudsViews()
-    print("Point clouds (from different camera angles) visualization saved to \"PointCloudsViews.png\"")
+    print("Point clouds (from different camera angles) visualization saved as \"PointCloudsViews.png\"")
 
     gaussian_initialization = GaussianInitialization(point_clouds.vertices, point_clouds.colors)
     gaussians = gaussian_initialization.initializeGaussians()
@@ -41,8 +40,12 @@ if __name__ == "__main__":
     print("Applying perspective projection")
     print("Obtaining ground truth image through 3D gaussian splatting")
     diffusion_model_2d.train_ground_truth()
-    print("Ground truth training iteration images saved to \"ground_truth_training_iterations.gif\"")
+    print("Ground truth training iteration images saved as \"ground_truth_training_iterations.gif\"")
 
     print("Optimizing with 2d diffusion model")
     diffusion_model_2d.train()
-    print("Diffusion model training iteration images saved to \"diffusion_training_iterations.gif\"")
+    print("Diffusion model training iteration images saved as \"diffusion_training_iterations.gif\"")
+
+
+
+

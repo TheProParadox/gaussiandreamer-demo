@@ -1,6 +1,6 @@
 diffusers
 accelerate
-gsplat==0.1.12s
+gsplat==0.1.12
 transformers
 Ninja
 pybind11
