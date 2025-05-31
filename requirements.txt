@@ -1,0 +1,9 @@
+diffusers
+accelerate
+gsplat==0.1.12s
+transformers
+Ninja
+pybind11
+matplotlib
+scipy
+torchvision
