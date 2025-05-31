@@ -12,14 +12,14 @@ This repository presents a **CSE252D course demonstration** of **GaussianDreamer
 The actual repository of the paper has been fully integrated into [threestudio project](https://github.com/threestudio-project/threestudio) and has no clean code to understand each stage of the pipeline. This is the motivation of this repo. We have remove the threestudio dependancies and make the code simple and readable and integrated with gsplat. Check out the Colab Link(using my repo) for the demonstration.
 If you dont want to understand code and want to run a simple colab demo, you can head over to [Colab Link (using Official Repo)](https://colab.research.google.com/drive/1PHdsF0PtqGb04FbcwAs_QIG_rNW7W4bh?usp=sharing)
 
-## Method Summary
+GaussianDreamer embarks on the task of text to 3D generation through a two stage pipeline:
 
-GaussianDreamer embarks on the task of **text-to-3D generation** using a two-stage pipeline:
+**3D Diffusion Prior**
+A pre-trained 3D diffusion generator such as Shap E first conjures a vibrant point cloud or mesh from the text prompt, providing a pivotal geometric and colour prior for the scene. 
+GitHub
 
-1. **2D Diffusion Model**: Generates reference views of a 3D scene from a text prompt using a pre-trained image generator like Stable Diffusion.
-2. **3D Gaussian Optimization**: Aligns a 3D Gaussian field to match the 2D views using differentiable splatting and novel regularization strategies.
-
-This approach excels in producing coherent, colorful, and structurally plausible 3D assets from simple text inputs.
+**2D Diffusion Guided Gaussian Optimization**
+The prior is converted to a field of 3D Gaussians whose positions, scales, orientations, colours, and opacities are refined with Score Distillation Sampling, using a 2D diffusion backbone like Stable Diffusion as a perceptual loss. Multi-view splats are rendered differentiably and updated until they comprehensively align with the prompt semantics. 
 
 ---
 
