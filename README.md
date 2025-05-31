@@ -60,4 +60,4 @@ There are 5 output files:
 - "ground_truth_training_iterations.gif" - gif visualization of 3d gaussian splatting to obtain ground truth image
    "diffusion_training_iterations.gif" - gif visualization of optimization with 2d diffusion model
 
-*Note: The code require CUDA (~10GB). Also you may have to increase optimization steps till 20000, I have done it for 1000 to show decent results.*
+*Note: The code require CUDA (~10GB). Also you may have to increase optimization steps till 100000 to match results of official code. Takes around 15-20 to get output.*
