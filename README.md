@@ -45,16 +45,19 @@ python main.py prompt sample_proportion
 prompt = prompt as a string 
 sample_proportion = value between 0.0 and 1.0 designating how many points to sample from the triangle mesh
 
-Example: !python main.py "a shark" 0.5
+Example: 
+```bash
+python main.py "a shark" 0.5
+```
 
 All output can be found on the right under the same folder.
 
 There are 5 output files:
 
-"PointClouds.png" - visualization of generated point clouds
-"PointCloudsViews.png" - visualization of generated point clouds from different camera angles
-"GroundTruthImage.png" - the projected ground truth image in 2d from 3d point clouds
-"ground_truth_training_iterations.gif" - gif visualization of 3d gaussian splatting to obtain ground truth image
-"diffusion_training_iterations.gif" - gif visualization of optimization with 2d diffusion model
+- "PointClouds.png" - visualization of generated point clouds
+- "PointCloudsViews.png" - visualization of generated point clouds from different camera angles
+- "GroundTruthImage.png" - the projected ground truth image in 2d from 3d point clouds
+- "ground_truth_training_iterations.gif" - gif visualization of 3d gaussian splatting to obtain ground truth image
+   "diffusion_training_iterations.gif" - gif visualization of optimization with 2d diffusion model
 
-### Note: The code require CUDA (~10GB). Also you may have to increase optimization steps till 20000, I have done it for 1000 to show decent results.
+*Note: The code require CUDA (~10GB). Also you may have to increase optimization steps till 20000, I have done it for 1000 to show decent results.*
