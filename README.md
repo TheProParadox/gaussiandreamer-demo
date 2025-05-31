@@ -1,2 +1,3 @@
-# dreamgaussian-demo
-Demonstration for CSE252D - DreamGaussian
+# Gaussian Dreamer
+Demonstration for CSE252D - Gaussian Dreamer
+
