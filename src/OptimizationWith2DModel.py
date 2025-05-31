@@ -2,7 +2,6 @@ import torch
 import math
 
 from gsplat import project_gaussians, rasterize_gaussians
-# from gsplat import fully_fused_projection, rasterization
 from torch import Tensor, optim
 from diffusers import StableDiffusionPipeline, EulerDiscreteScheduler
 from torchvision import transforms

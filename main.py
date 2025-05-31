@@ -1,8 +1,8 @@
 import sys
 
-from DiffusionModel3D import DiffusionModel3D
-from GaussianInitialization import GaussianInitialization
-from OptimizationWith2DModel import OptimizationWith2DModel
+from src.DiffusionModel3D import DiffusionModel3D
+from src.GaussianInitialization import GaussianInitialization
+from src.OptimizationWith2DModel import OptimizationWith2DModel
 
 if __name__ == "__main__":
 
