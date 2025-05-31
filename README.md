@@ -9,6 +9,7 @@ This repository presents a **CSE252D course demonstration** of **GaussianDreamer
 
 ---
 
+The actual repository of the paper has been fully integrated into [threestudio project](https://github.com/threestudio-project/threestudio) and has no clean code to understand each stage of the pipeline. This is the motivation of this repo. We have remove the threestudio dependancies and make the code simple and readable and integrated with gsplat. If you dont want to understand code and want to run a simple colab demo, you can head over to [Colab Link (Official Repo)](https://colab.research.google.com/drive/1PHdsF0PtqGb04FbcwAs_QIG_rNW7W4bh?usp=sharing)
 
 ## Method Summary
 
