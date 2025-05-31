@@ -9,6 +9,7 @@ This repository presents a **CSE252D course demonstration** of **GaussianDreamer
 
 ---
 
+
 ## Method Summary
 
 GaussianDreamer embarks on the task of **text-to-3D generation** using a two-stage pipeline:
@@ -26,10 +27,10 @@ This approach excels in producing coherent, colorful, and structurally plausible
 To run the demonstration, clone this repository and configure your Python environment as follows:
 
 ```bash
-git clone https://github.com/TheProParadox/gaussiandreamer-demo.git
-cd gaussiandreamer-demo
 python3 -m venv cse252d
 source cse252d/bin/activate
+git clone https://github.com/TheProParadox/gaussiandreamer-demo.git
+cd gaussiandreamer-demo
 pip install -r requirements.txt
 ```
 
@@ -53,7 +54,5 @@ There are 5 output files:
 "GroundTruthImage.png" - the projected ground truth image in 2d from 3d point clouds
 "ground_truth_training_iterations.gif" - gif visualization of 3d gaussian splatting to obtain ground truth image
 "diffusion_training_iterations.gif" - gif visualization of optimization with 2d diffusion model
-"gaussians_3d.npz" - all parameters of guassian primitive/
-"scene_pointcloud.ply" - asset final (can be imported in Blender/SuperSplat/GSplat)
 
 ### Note: The code require CUDA (~10GB). Also you may have to increase optimization steps till 20000, I have done it for 1000 to show decent results.

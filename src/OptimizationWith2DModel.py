@@ -42,7 +42,7 @@ class OptimizationWith2DModel:
         self.get_ground_truth_image()
 
     def initialize_parameters(self, positions, colors, scales, rotations, opacities):
-        self.positions = torch.tensor(positions, dtype=torch.float32, device='cuda')
+ss        self.positions = torch.tensor(positions, dtype=torch.float32, device='cuda')
         self.colors    = torch.tensor(colors, dtype=torch.float32, device='cuda')
         self.scales    = torch.tensor(scales, dtype=torch.float32, device='cuda')
         self.quats     = torch.tensor(rotations, dtype=torch.float32, device='cuda')
