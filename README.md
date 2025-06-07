@@ -40,7 +40,7 @@ pip install -r requirements.txt
 Use the following command to run the code: 
 
 ```bash
-python main.py prompt sample_proportion
+python main.py <prompt> <sample_proportion>
 ```
 prompt = prompt as a string 
 sample_proportion = value between 0.0 and 1.0 designating how many points to sample from the triangle mesh
